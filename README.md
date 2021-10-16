@@ -26,7 +26,7 @@ The module inditek_main runs the following sequence of functions with their corr
 The script to calculate the Lin’s concordance correlation coefficient (CCC) between the logistic model time series and the fossil time series with a Kmin-Kmax combinations in the geometric sequence of base 2, from 2 to 256 genera, is **inditek_LoopKminKmax**. Kmin-Kmax are the range of carrying capacities in the global maps according to food availability.
 
 ### Figure 1 to 3:
-The script to plot the main manuscript figures 1-3 is **inditek_figures**. It needs to be in the same folder of INDITEK*.mat files generated with inditek_main.m & inditek_loopKminKmax.m
+The script to plot the main manuscript figures 1-3 is **inditek_figures**. It needs to be in the same folder of INDITEK*.mat files generated with inditek_main.m & inditek_loopKminKmax.m For figure 1 you further need to download the free MATLAB package m_map (https://www.eoas.ubc.ca/~rich/map.html) and add it to the toolbox folder.
 
 Explanations of all the functions are written inside them. For any further doubt, do not hesitate to contact me: carmencomas@gmail.com or cgcomas@cmima.csic.es
 
