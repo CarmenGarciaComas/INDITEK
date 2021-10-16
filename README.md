@@ -17,7 +17,7 @@ The module inditek_main runs the following sequence of functions with their corr
 - **inditek_alphadiv**: computes diversity in the model particules ---> *INDITEKexponential_alpha.mat & INDITEKlogistic_alpha.mat*
 - **inditek_gridding_alphadiv**: interpolates diversity in 0.5x0.5º grids ---> *INDITEKexponential_grid.mat & INDITEKlogistic_grid.mat*
 - **inditek_peaks_troughs**: detects diversity peaks & troughs ---> *INDITEKexponential_PT.mat & INDITEKlogistic_PT.mat*
-- **inditek_bresenham**: transect diversity from peaks to troughs ---> *INDITEKexponential_transects.mat & INDITEKlogistic_transects.mat*
+- **inditek_bresenham**: traces diversity along transects ---> *INDITEKexponential_transects.mat & INDITEKlogistic_transects.mat*
 - **inditek_diversity_transects**: diversity integration along transects ---> *INDITEKexponential_transectsDiv.mat & INDITEKlogistic_transectdiv.mat*
 - **inditek_gammadiversity**: computes global diversity from transect diversities ---> *INDITEKexponential_global.mat & INDITEKlogistic_global.mat*
 - **inditek_plotgamma**: Compares the model diversity time series with the fossil time series ---> *INDITEK_ModelvsFossil.jpeg*
