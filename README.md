@@ -2,7 +2,7 @@
 
 A global model of diversification (#genera My^-1) of marine benthic invertebrates in the Phanerozoic (from 541 Ma to present).
 
-The model is written in MATLAB 2010b in a 1.7 GHz 2-core Intel Core i7, and tested with MATLAB 2021a in a MacOS 2.3 GHz 8-Core Intel Core i9, with MATLAB 2020b on Windows with a 2.5 GHz Intel i5-3210M, and on Linux Debian with a 2.6 GHz Intel Xeon E5-2640 processor.
+The model is written in MATLAB 2013b in a 1.7 GHz 2-core Intel Core i7, and tested with MATLAB 2021a in a MacOS 2.3 GHz 8-Core Intel Core i9, with MATLAB 2020b on Windows with a 2.5 GHz Intel i5-3210M, and on Linux Debian with a 2.6 GHz Intel Xeon E5-2640 processor.
 
 
 ## How to run the model:
