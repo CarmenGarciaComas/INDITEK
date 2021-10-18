@@ -36,7 +36,5 @@ To calibrate the Kmin and Kmax parameters of the logistic model, use the functio
 ### Figures 1 to 3:
 The script to plot the main manuscript figures 1-3 is **inditek_figures.m**. It needs to be in the same folder of INDITEK*.mat files generated with inditek_main.m & inditek_loopKminKmax.m For figure 1 you further need to download the free MATLAB package m_map (https://www.eoas.ubc.ca/~rich/map.html) and add it to the toolbox folder.
 
-### Videos showing diversification from 541 Ma to present are located in the folder videos
-
 Explanations of all the functions are written inside them. For any further doubt, do not hesitate to contact me: carmencomas@gmail.com or cgcomas@cmima.csic.es
 
