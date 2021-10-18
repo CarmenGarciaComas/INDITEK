@@ -1,8 +1,6 @@
 close all
 clear all
 
-addpath(genpath('~/toolbox'))
-
 disp('Run this script in a folder without .mat files from old runs. If it is OK press any key to continue')
 pause
 
