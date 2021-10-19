@@ -2,7 +2,7 @@ function [] = inditek_gammadiversity(ext_pattern)
 
 disp('** inditek_gammadiversity.m **')
 
-% calculate global (gamma) diversity by iteratively adding a % of diversity of each transect according to their minimum peak distance to greater peaks (zig-zag integration)
+% calculate global (gamma) diversity by iteratively adding a % of diversity of each transect according to their minimum peak distance to to peaks with greater transect diversity (zig-zag integration)
 if ext_pattern==3
     ini=3;
 else
