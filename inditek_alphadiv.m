@@ -6,7 +6,7 @@ disp('** inditek_alphadiv.m **')
 % New coastal particles or inundated land Do= nearest neighbour (NN) D
 % Dt=Do*exp^(rho*t);
 % Dt+1=rho*Dt*(1-Dt/K); % exponential model= K=inf; logistic model = K (dependent on food)
-% Because time steps are >1MA and I want to calculate to the 1MA step, I add deltaAge=time elapsed (this can be different from time frame n & n+1 difference because some particules
+% Because time steps are >1MA and I want to calculate to the 1MA step, I add deltaAge=time elapsed (this can be different from time frame n & n+1 difference because some particles
 % were created sometime within the XMA time)
 
 pt=Point_timeslices+1;
@@ -87,7 +87,7 @@ for ts=Point_timeslices%current Point_timeslice
     
         deltaAgeS=ageS(posS)-shelf_lonlatAge(posS,step-1,3);% a vector of 5MA & some NaN if the plate did not exist at time count-1
         
-        %######################## Continental shelf particules did not exist or were not inundated in time-1 and now start accumulating diversity
+        %######################## Continental shelf particles did not exist or were not inundated in time-1 and now start accumulating diversity
         
         pos2S=find(isnan(deltaAgeS)==1 & ageS(posS)<=ts2-ts); % particles in time t-1 that did not exist
         pos2S=[pos2S;find(shelf_lonlatAge(posS,step-1,3)==0 & ageS(posS)<=ts2-ts)];  % add also particles in time t-1 that were above land
@@ -155,7 +155,7 @@ for ts=Point_timeslices%current Point_timeslice
             end
         end
         
-        %######################## Special case of continental shelf particules that did not exist in time-1 and were artificially added in the Gplate model to fill gaps with age of nearest neighbour continental-shelf particles (thus we start diversity with nearest continental shelf particles)
+        %######################## Special case of continental shelf particles that did not exist in time-1 and were artificially added in the Gplate model to fill gaps with age of nearest neighbour continental-shelf particles (thus we start diversity with nearest continental shelf particles)
         
         pos2S=find(isnan(deltaAgeS)==1 & ageS(posS)>ts2-ts); % particle in time t-1 did not exist or was above land and suddenly they have age greater than the time gap (ts2-ts)
         pos2S=[pos2S;find(shelf_lonlatAge(posS,step-1,3)==0 & ageS(posS)>ts2-ts)];
@@ -209,7 +209,7 @@ for ts=Point_timeslices%current Point_timeslice
             end
         end
         
-        %######################## Particules continuing to accumulate diversity
+        %######################## Particles continuing to accumulate diversity
         
         pos2O=find(deltaAgeO>0); %existing ocean particles continue to accumulate diversity
         pos2S=find(deltaAgeS>0 & deltaAgeS<=ts2-ts & shelf_lonlatAge(posS,step-1,3)~=0); %exisiting shelf particles with normal behaviour continue to accumulate diversity
