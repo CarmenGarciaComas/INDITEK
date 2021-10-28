@@ -9,7 +9,7 @@ pause
 
 % folder with public matlab tools used in our code:
 
-addpath(genpath('~/toolbox/'))
+addpath(genpath('~/toolbox'))
 
 % ----------------------------------- PARAMETERS --------------------------
 
