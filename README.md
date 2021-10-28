@@ -8,7 +8,7 @@ The model is written in MATLAB 2013b in a 1.7 GHz 2-core Intel Core i7, and test
 
 ## How to run the model:
 
-The main module of INDITEK is **inditek_main.m**. To generate spatial distribution maps of diversity and time trajectories of global diversity based on the logistic and exponential diversification models, run inditek_main. In inditek_main you can manually change model parameters and extinction pattern to apply and compare the fossil time series to the output. 
+The main module of INDITEK is **inditek_main.m**. To generate maps of the spatial distributions of diversity and time trajectories of global diversity based on the logistic and exponential diversification models, run inditek_main. In inditek_main you can manually change model parameters and extinction pattern to apply and compare the fossil time series to the output. 
 
 To run the model, you need to have in the same folder the functions (.m), the folder toolbox and the folder data. The folder toolbox contains public functions used by INDITEK. The folder data contains:
 - Point_ages_xyz.mat=floor age data from the plate-tectonic/paleo-elevation model.
