@@ -25,7 +25,7 @@ Kmin=4; % Carrying capacity of #genera at minimum food availability
 % 2. Alroy curve
 % 3. Sepkoski curve
 
-ext_pattern=2;
+ext_pattern=3;
 
 % ----------------------------------- load data----------------------------
 % Sea floor age:
