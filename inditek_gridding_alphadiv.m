@@ -7,7 +7,6 @@ disp('** inditek_gridding_alphadiv.m **')
 
 load data/landShelfOceanMask % 0=ocean/1=shelf/2=land
 landShelfOceanMask=flip(landShelfOceanMask,3);
-m_proj('miller','lat',[-77 77]);
 [X,Y]=meshgrid(landShelfOcean_Lon,landShelfOcean_Lat);
 
 Xocean=cell(size(landShelfOceanMask,3),1);
