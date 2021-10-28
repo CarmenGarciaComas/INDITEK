@@ -38,7 +38,7 @@ N=[2,4,8,16,32,64,128,256];
 n=0;
 CCC_5=NaN(length(N),length(N));
 
-for Kmin=N(1:2)% Carrying capacity of #genera at maximum food availability
+for Kmin=N% Carrying capacity of #genera at maximum food availability
     f=find(Kmin==N);
     n=n+1
     m=0;
