@@ -212,7 +212,7 @@ a=xlabel('Kmin (# genera area^-^1)');
 set(a,'Fontname','arial','fontsize',9);
 a=ylabel('Kmax (# genera area^-^1)');
 set(a,'Fontname','arial','fontsize',9);
-set(gca, 'ytick',[1:size(CCC,1)],'yticklabel',{'256','128','64','32','16','8','4','2'},'xtick',[1:size(R,1)],'xticklabel',{'2','4','8','16','32','64','128','256'},'linewidth',1.2);
+set(gca, 'ytick',[1:size(CCC,1)],'yticklabel',{'256','128','64','32','16','8','4','2'},'xtick',[1:size(CCC,1)],'xticklabel',{'2','4','8','16','32','64','128','256'},'linewidth',1.2);
 caxis([0,1])
 colorbar
 hold on
