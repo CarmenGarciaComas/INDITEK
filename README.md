@@ -16,7 +16,7 @@ To run the model, you need to have in the same folder the functions (.m), the fo
 - landShelfOceanMask.mat= 0-2 mask to distingish land-shelf-ocean grids.
 - POSoceanRidge.mat= 1 mask locating troughs to trace transects from peaks of diversity.
 - LonDeg.mat= degrees of longitud according to the latitude with distance equivalent to 1 degree at the equator. This is used to search for NN coastal points in a square to account for immigration.
-- rhoExt.xlsx=extinction patterns to input in the model.
+- rhoExt.xlsx= mass extinction patterns to input in the model.
 - FossilTimeSeries.xlsx= fossil time series to compare with the model time series.
 
 ### Model functions & outputs (outputs correspond to figure 1 & 2 in the manuscript):
