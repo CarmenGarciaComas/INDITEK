@@ -23,8 +23,8 @@ To run the model, you need to have in the same folder the functions (.m), the fo
 The module inditek_main runs the following sequence of functions with their corresponding outputs:
 
 - **inditek_rhonet.m**: calculates diversification rate (rho) and effective carrying capacity (Keff) ---> *particleRhoExpLog.mat*
-- **inditek_alphadiv.m**: computes diversity in the model particules ---> *INDITEKexponential_alpha.mat & INDITEKlogistic_alpha.mat*
-- **inditek_gridding_alphadiv.m**: interpolates diversity in 0.5x0.5º grids ---> *INDITEKexponential_grid.mat & INDITEKlogistic_grid.mat*
+- **inditek_alphadiv.m**: computes diversity in the model particles ---> *INDITEKexponential_alpha.mat & INDITEKlogistic_alpha.mat*
+- **inditek_gridding_alphadiv.m**: interpolates diversity in 0.5ºx0.5º grids ---> *INDITEKexponential_grid.mat & INDITEKlogistic_grid.mat*
 - **inditek_peaks_troughs.m**: detects diversity peaks & troughs ---> *INDITEKexponential_PT.mat & INDITEKlogistic_PT.mat*
 - **inditek_bresenham.m**: traces diversity along transects ---> *INDITEKexponential_transects.mat & INDITEKlogistic_transects.mat*
 - **inditek_diversity_transects.m**: diversity integration along transects ---> *INDITEKexponential_transectsDiv.mat & INDITEKlogistic_transectdiv.mat*
