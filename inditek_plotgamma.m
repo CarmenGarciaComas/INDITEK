@@ -30,7 +30,7 @@ end
 d=d(isnan(d)==0);t=t(isnan(d)==0);
 d=interp1(t,d,-1*Point_timeslices,'linear');
 
-dnorm=(d2-nanmin(d2))./(nanmax(d2)-nanmin(d2));
+dnorm=(d-nanmin(d))./(nanmax(d)-nanmin(d));
 dnorm2=dnorm;dnorm2(NaNpos)=NaN;
 if ext_pattern==3
     ini=3;
@@ -55,8 +55,8 @@ for i=1:length(list)
      eval(['load ' list(i).name]); 
      D=gammaD;
      D(1:ini)=1;  
-     M=nanmax(D2)+0.1*nanmax(D2); 
-     Dnorm=(D2-nanmin(D2))./(nanmax(D2)-nanmin(D2));
+     M=nanmax(D)+0.1*nanmax(D); 
+     Dnorm=(D-nanmin(D))./(nanmax(D)-nanmin(D));
      Dnorm2=Dnorm;Dnorm2(NaNpos)=NaN;
     nptos = length(dnorm2(ini:end));
     meanx = nanmean(dnorm2(ini:end));
