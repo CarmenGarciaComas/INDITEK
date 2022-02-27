@@ -29,9 +29,9 @@ end
 
 d=d(isnan(d)==0);t=t(isnan(d)==0);
 d=interp1(t,d,-1*Point_timeslices,'linear');
-d(NaNpos)=NaN;
-dnorm=(d-nanmin(d))./(nanmax(d)-nanmin(d));
 
+dnorm=(d2-nanmin(d2))./(nanmax(d2)-nanmin(d2));
+dnorm2=dnorm;dnorm2(NaNpos)=NaN;
 if ext_pattern==3
     ini=3;
 else
@@ -54,17 +54,16 @@ for i=1:length(list)
     
      eval(['load ' list(i).name]); 
      D=gammaD;
-     D(1:ini)=1; 
-     D(NaNpos)=NaN;
-     M=nanmax(D)+0.1*nanmax(D); 
-     Dnorm=(D-nanmin(D))./(nanmax(D)-nanmin(D));
-     
-    nptos = length(dnorm(ini:end));
-    meanx = nanmean(dnorm(ini:end));
-    meany = nanmean(Dnorm(ini:end));
-    sigmax = nanstd(dnorm(ini:end));
-    sigmay = nanstd(Dnorm(ini:end));
-    rho_xy = corrcoef(dnorm(ini:end)',Dnorm(ini:end),'rows','pairwise');
+     D(1:ini)=1;  
+     M=nanmax(D2)+0.1*nanmax(D2); 
+     Dnorm=(D2-nanmin(D2))./(nanmax(D2)-nanmin(D2));
+     Dnorm2=Dnorm;Dnorm2(NaNpos)=NaN;
+    nptos = length(dnorm2(ini:end));
+    meanx = nanmean(dnorm2(ini:end));
+    meany = nanmean(Dnorm2(ini:end));
+    sigmax = nanstd(dnorm2(ini:end));
+    sigmay = nanstd(Dnorm2(ini:end));
+    rho_xy = corrcoef(dnorm2(ini:end)',Dnorm2(ini:end),'rows','pairwise');
     
     ccc= (2.0 * rho_xy(2) * sigmax * sigmay) / (sigmax^2 + sigmay^2 + (meanx - meany)^2);
     
@@ -257,11 +256,11 @@ for i=1:length(list)
      
      subplot(2,3,3)
      
-     plot(dnorm(ini+1:end),Dnorm(ini+1:end),'ko','markerfacecolor','k')
+     plot(dnorm2(ini+1:end),Dnorm2(ini+1:end),'ko','markerfacecolor','k')
      hold on
-     p2 = polyfit(dnorm(ini+1:end)',Dnorm(ini+1:end),1);
-     y=polyval(p2,dnorm(ini+1:end)');
-     plot(dnorm(ini+1:end),y,'k-')
+     p2 = polyfit(dnorm2(ini+1:end)',Dnorm2(ini+1:end),1);
+     y=polyval(p2,dnorm2(ini+1:end)');
+     plot(dnorm2(ini+1:end),y,'k-')
      a=text(0.02,0.9,['r^2= ' num2str(rho_xy(2)^2,2)]);
      set(a,'FontName','times new roman','fontsize',12,'color','k');
      a=text(0.02,0.83,['ccc= ' num2str(ccc,2)]);
@@ -279,14 +278,14 @@ for i=1:length(list)
      D(1:ini)=1;
      
      Dnorm=(D-min(D))./(max(D)-min(D));
+     Dnorm2=Dnorm;Dnorm2(NaNpos)=NaN;
      
-     
-    nptos = length(dnorm(ini:end));
-    meanx = nanmean(dnorm(ini:end));
-    meany = nanmean(Dnorm(ini:end));
-    sigmax = nanstd(dnorm(ini:end));
-    sigmay = nanstd(Dnorm(ini:end));
-    rho_xy = corrcoef(dnorm(ini:end)',Dnorm(ini:end),'rows','pairwise');
+    nptos = length(dnorm2(ini:end));
+    meanx = nanmean(dnorm2(ini:end));
+    meany = nanmean(Dnorm2(ini:end));
+    sigmax = nanstd(dnorm2(ini:end));
+    sigmay = nanstd(Dnorm2(ini:end));
+    rho_xy = corrcoef(dnorm2(ini:end)',Dnorm2(ini:end),'rows','pairwise');
     
     ccc= (2.0 * rho_xy(2) * sigmax * sigmay) / (sigmax^2 + sigmay^2 + (meanx - meany)^2);
     
@@ -480,11 +479,11 @@ for i=1:length(list)
      set(gca,'ylim',[0,1.1],'xlim',[-541,0],'xtick',[-500:100:0],'FontName','times new roman','fontsize',10)
      
      subplot(2,3,6)
-     plot(dnorm(ini+1:end),Dnorm(ini+1:end),'ko','markerfacecolor','k')
+     plot(dnorm2(ini+1:end),Dnorm2(ini+1:end),'ko','markerfacecolor','k')
      hold on
-     p2 = polyfit(dnorm(ini+1:end)',Dnorm(ini+1:end),1);
-     y=polyval(p2,dnorm(ini+1:end)');
-     plot(dnorm(ini+1:end),y,'k-')
+     p2 = polyfit(dnorm2(ini+1:end)',Dnorm2(ini+1:end),1);
+     y=polyval(p2,dnorm2(ini+1:end)');
+     plot(dnorm2(ini+1:end),y,'k-')
      a=text(0.02,0.9,['r^2= ' num2str(rho_xy(2)^2,2)]);
      set(a,'FontName','times new roman','fontsize',12,'color','k');
      a=text(0.02,0.83,['ccc= ' num2str(ccc,2)]);
