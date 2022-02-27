@@ -19,18 +19,25 @@ elseif ext_pattern==3
     t=d(:,5);
     d=d(:,6);
 end
+if ext_pattern==1
+    NaNpos=[16:18,26:29,41:43,48:49,71];
+elseif ext_pattern==2
+    NaNpos=[13:16,26:28,31:32,39:45,49:52,67:68];
+elseif ext_pattern==3
+    NaNpos=[15:17,26:28,31:33,41:44,49:50,70];
+end
 
 d=d(isnan(d)==0);t=t(isnan(d)==0);
 d=interp1(t,d,-1*Point_timeslices,'linear');
-
-dnorm=(d-min(d))./(max(d)-min(d));
+d(NaNpos)=NaN;
+dnorm=(d-nanmin(d))./(nanmax(d)-nanmin(d));
 
 if ext_pattern==3
     ini=3;
 else
     ini=1;
 end
-
+    
 label1_model={'Exponential model','Logistic model'};
 label2_model={'Exponential model normalised diversity','Logistic model normalised diversity'};
 n=0;
@@ -48,8 +55,9 @@ for i=1:length(list)
      eval(['load ' list(i).name]); 
      D=gammaD;
      D(1:ini)=1; 
+     D(NaNpos)=NaN;
      M=nanmax(D)+0.1*nanmax(D); 
-     Dnorm=(D-min(D))./(max(D)-min(D));
+     Dnorm=(D-nanmin(D))./(nanmax(D)-nanmin(D));
      
     nptos = length(dnorm(ini:end));
     meanx = nanmean(dnorm(ini:end));
