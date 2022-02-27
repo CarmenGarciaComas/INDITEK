@@ -37,7 +37,7 @@ for i=1:length(list)
     elseif ext_pattern==2
         NaNpos=[13:16,26:28,31:32,39:45,49:52,67:68];
     elseif ext_pattern==3
-        NaNpos=[17:19,26:30,44:45,48:50,60,71];
+        NaNpos=[15:17,26:28,31:33,41:44,49:50,70];
     end
     
     D(ini)=1;
