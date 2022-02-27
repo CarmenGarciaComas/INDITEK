@@ -126,7 +126,7 @@ if ext_pattern==1
 elseif ext_pattern==2
     x_points = [-471,-471,-452,-452];
 elseif ext_pattern==3
-    x_points = [-448,-448,-437,-437];
+    x_points = [-456,-456,-442,-442];
 end
 y_points = [0, M, M, 0];
 color = [0.7,0.7,0.7];
@@ -139,7 +139,7 @@ if ext_pattern==1
 elseif ext_pattern==2
     x_points = [-399,-399,-378,-378];
 elseif ext_pattern==3
-    x_points = [-393,-393,-353,-353];
+    x_points = [-396,-396,-374,-374];
 end
 y_points = [0, M, M, 0];
 color = [0.7,0.7,0.7];
@@ -152,7 +152,7 @@ if ext_pattern==1
 elseif ext_pattern==2
     x_points = [-275,-275,-244,-244];
 elseif ext_pattern==3
-    x_points = [-253,-253,-245,-245];
+    x_points = [-343,-343,-317,-317];
 end
 y_points = [0, M, M, 0];
 color = [0.7,0.7,0.7];
@@ -165,7 +165,7 @@ if ext_pattern==1
 elseif ext_pattern==2
     x_points = [-207,-207,-185,-185];
 elseif ext_pattern==3
-    x_points = [-220,-220,-200,-200];
+    x_points = [-269,-269,-250,-250];
 end
 y_points = [0, M, M, 0];
 color = [0.7,0.7,0.7];
@@ -173,12 +173,21 @@ hold on;
 a = fill(x_points, y_points, color,'LineStyle','none');
 alpha(a,.1);
 hold on
+hold on
+if ext_pattern==3
+   x_points = [-215,-215,-199,-199];
+end
+y_points = [0, M, M, 0];
+color = [0.7,0.7,0.7];
+hold on;
+a = fill(x_points, y_points, color,'LineStyle','none');
+alpha(a,.1);
 if ext_pattern==1
     x_points = [-64,-64,-62,-62];
 elseif ext_pattern==2
     x_points = [-86,-86,-75,-75];
 elseif ext_pattern==3
-    x_points = [-64,-64,-59,-59];
+    x_points = [-69,-69,-65,-65];
 end
 y_points = [0, M, M, 0];
 color = [0.7,0.7,0.7];
@@ -190,7 +199,7 @@ if ext_pattern==1
 elseif ext_pattern==2
     NaNpos=[13:16,26:28,31:32,39:45,49:52,67:68];
 elseif ext_pattern==3
-    NaNpos=[17:19,26:30,44:45,48:50,60,71];
+    NaNpos=[15:17,26:28,31:33,41:44,49:50,70];
 end
 print ('Inditek_Figure2','-djpeg', '-r200')
 
