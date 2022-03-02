@@ -204,7 +204,7 @@ for i=1:length(timeframes)
     sp=sp+1;
     subplot(2,3,sp)
     set(gca,'position',POS(sp,:))
-    m_pcolor(X,Y,log10(D(:,:,i)+10^-16);
+    m_pcolor(X,Y,log10(D(:,:,i)+10^-16));
     m_grid('xaxis','middle','xticklabel',[],'yticklabel',[],'backcolor',[0.9 0.9 0.9],'LineWidth',0.6,'linestyle',':');
     a=title([num2str(TF(i)),' MA']);
     set(a,'FontName','arial','fontsize',12)
