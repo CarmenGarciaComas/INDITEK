@@ -193,7 +193,7 @@ print ('Inditek_Figure2','-djpeg', '-r200')
 close
 
 %######################### FIGURE 3: DIVERSITY/CARRYING CAPACITY MAPS ##################################
-load INDITEKlogistic_AlphabyK %this should be the calibrated logistic output (from 2nd launch of inditek_main with calibrated Kmin & Kmax
+load INDITEKalphabyk_grid %this should be the calibrated logistic output (from 2nd launch of inditek_main with calibrated Kmin & Kmax
 D=D(:,:,timeframes);
 figure
 set(gcf, 'PaperUnits', 'centimeters','papersize',[20 10])
