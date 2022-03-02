@@ -223,6 +223,4 @@ for i=1:length(timeframes)
 end
 print ('Inditek_Figure3','-djpeg', '-r200')
 
-print ('Inditek_Figure3','-djpeg', '-r200')
-
 clear all;close all;clc
