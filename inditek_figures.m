@@ -210,14 +210,14 @@ for i=1:length(timeframes)
     set(a,'FontName','arial','fontsize',12)
     a=text(-2,1,Let{sp});
     set(a,'FontName','arial','fontsize',12)
-    caxis([log10(1),M])
+    caxis([log10(0.1),log10(1)])
     colormap(jet(50));
    
     if i==length(timeframes)
         h = colorbar('location','SouthOutside','Position',[0.05,5,0.35,0.03]);
         set(h,'xtick',[log10(0.1),log10(0.15),log10(0.25),log10(0.4),log10(0.65),log10(1)],'xticklabel',{'0.1','0.15','0.25','0.4','0.65','1'})
-        set(h,'position',[0.35,0.1,0.3,0.03],'FontName','arial','fontsize',9)
-        text(-6,-2.1,'Diversity/K_e_f_f','FontName','arial','fontsize',12);
+        set(h,'position',[0.35,0.08,0.3,0.03],'FontName','arial','fontsize',9)
+        text(-5,-2.1,'Diversity/K_e_f_f','FontName','arial','fontsize',12);
     end
     
 end
