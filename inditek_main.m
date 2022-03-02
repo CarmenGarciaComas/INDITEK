@@ -42,6 +42,9 @@ load data/Point_foodtemp
 %logistic model
 label_cases = {'logistic'}; 
 inditek_alphadiv(label_cases,rho_ocean,rho_shelf,K_ocean,K_shelf,Point_timeslices,ext_pattern,shelf_lonlatAge,ocean_lonlatAge);
+% DIVERSITY/Keff BY GRID:
+warning('off')
+inditek_gridding_alphabyK(K_ocean,K_shelf,label_cases,ext_pattern)
 %exponential model
 K_ocean=inf*ones(size(K_ocean));K_shelf=inf*ones(size(K_shelf)); % overwrite K_ocean & K_shelf as infinite for the exponential model to run
 label_cases = {'exponential'}; 
