@@ -155,7 +155,7 @@ print ('Inditek_Figure1','-djpeg', '-r200')
 m_proj('Mollweide','clongitude',0);
 timeframes=[7,16,25,36,69,82];
 TF=[500,450,400,300,70,0];
-load INDITEKcaliblogistic_grid
+load INDITEKlogistic_grid %this should be the calibrated logistic output (from 2nd launch of inditek_main with calibrated Kmin & Kmax
 D=D(:,:,timeframes);
 M=log10(128);
 close all
@@ -193,7 +193,7 @@ print ('Inditek_Figure2','-djpeg', '-r200')
 close
 
 %######################### FIGURE 3: DIVERSITY/CARRYING CAPACITY MAPS ##################################
-load INDITEKcaliblogistic_AlphabyK
+load INDITEKlogistic_AlphabyK %this should be the calibrated logistic output (from 2nd launch of inditek_main with calibrated Kmin & Kmax
 D=D(:,:,timeframes);
 figure
 set(gcf, 'PaperUnits', 'centimeters','papersize',[20 10])
