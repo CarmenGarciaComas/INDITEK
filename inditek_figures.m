@@ -184,7 +184,7 @@ for i=1:length(timeframes)
         h = colorbar('location','SouthOutside','Position',[0.05,5,0.35,0.03]);
         set(h,'xtick',[log10(1),log10(2),log10(4),log10(8),log10(16),log10(32),log10(64),log10(128),log10(256)],'xticklabel',{'1','2','4','8','16','32','64','128','256'})
         set(h,'position',[0.35,0.1,0.3,0.03],'FontName','arial','fontsize',9)
-        text(-6,-2.1,'Diversity (# genera area^-^1)','FontName','arial','fontsize',12);
+        text(-6,-2,'Diversity (# genera area^-^1)','FontName','arial','fontsize',12);
     end
     
 end
@@ -216,8 +216,8 @@ for i=1:length(timeframes)
     if i==length(timeframes)
         h = colorbar('location','SouthOutside','Position',[0.05,5,0.35,0.03]);
         set(h,'xtick',[log10(0.1),log10(0.15),log10(0.25),log10(0.4),log10(0.65),log10(1)],'xticklabel',{'0.1','0.15','0.25','0.4','0.65','1'})
-        set(h,'position',[0.35,0.15,0.3,0.03],'FontName','arial','fontsize',9)
-        text(-5,-2.1,'Diversity/K_e_f_f','FontName','arial','fontsize',12);
+        set(h,'position',[0.35,0.13,0.3,0.03],'FontName','arial','fontsize',9)
+        text(-5,-2,'Diversity/K_e_f_f','FontName','arial','fontsize',12);
     end
     
 end
