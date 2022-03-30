@@ -7,7 +7,7 @@ eval(['load ' list(1).name ' Point_timeslices']);
 
 
 if ext_pattern==3
-    ini=3;
+    ini=4;
 else
     ini=1;
 end
